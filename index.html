@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Intro to Angular</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+    <script src="app.js"></script>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body ng-controller="MyController">
+    <h1>Ng-Roullette</h1>
+    <p>Have a button that simulates choosing a random
+    number one through six. If the number is one then
+    display BANG! on the page, otherwise, display click.
+    Keep track of the total number of times someone has
+    played. Keep track and display the number of times
+    someone has lost.</p>
+
+    <p>
+      <strong>Plays:</strong> {{clicks}}
+      <strong>Losses:</strong> {{losses}}
+    </p>
+
+    <p>
+      <button ng-click="click()">click me</button>
+    </p>
+
+    <h1>{{message}}</h1>
+  </body>
+</html>
