@@ -1,8 +1,12 @@
 var app = angular.module("MyApp", []);
-app.controller("MyController", ["$scope", function($scope) {
+app.controller("MyController", ["$scope", "OMDBApi" function($scope, OMDBApi) {
   $scope.message = "";
   $scope.clicks = 0;
   $scope.losses = 0;
+
+  OMDBApi.search("Star Wars").then(function(results) {
+    $scope.results = results;
+  });
 
   $scope.click = function() {
     $scope.clicks++;

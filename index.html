@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Intro to Angular</title>
+    <link href="style.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
     <script src="app.js"></script>
-    <link href="style.css" rel="stylesheet">
   </head>
-  <body ng-controller="MyController">
+  <body>
     <h1>Ng-Roullette</h1>
     <p>Have a button that simulates choosing a random
     number one through six. If the number is one then
@@ -16,15 +16,19 @@
     played. Keep track and display the number of times
     someone has lost.</p>
 
-    <p>
-      <strong>Plays:</strong> {{clicks}}
-      <strong>Losses:</strong> {{losses}}
-    </p>
+    <roulette></roulette>
 
-    <p>
-      <button ng-click="click()">click me</button>
-    </p>
+    <div ng-controller="MyController">
+      <p>
+        <strong>Plays:</strong> {{clicks}}
+        <strong>Losses:</strong> {{losses}}
+      </p>
 
-    <h1>{{message}}</h1>
+      <p>
+        <button ng-click="click()">click me</button>
+      </p>
+
+      <h1>{{message}}</h1>
+    </div>
   </body>
 </html>
